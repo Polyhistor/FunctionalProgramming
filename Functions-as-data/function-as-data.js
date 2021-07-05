@@ -19,11 +19,11 @@ const operationsMap = new Map([
   [Symbol('mathOps'), addThree],
 ]);
 
-let result = 0;
+let result = 1;
 
 operationsMap.forEach((value, key, map) => {
   if (key.description.includes('math')) {
-    result = value(0);
+    result = value(result);
   }
 });
 

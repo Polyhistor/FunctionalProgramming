@@ -1,5 +1,13 @@
 <?php
 
+
+// function count_down($x)
+// {
+//     for ($i = $x; $i >= 0; --$i) {
+//         echo "$i\n";
+//     }
+// }
+
 function count_down($x)
 {
     if ($x < 0) {
