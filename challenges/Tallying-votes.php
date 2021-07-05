@@ -15,3 +15,5 @@ $tally_votes = function ($votes) {
         [],
     );
 };
+
+echo $tally_votes;

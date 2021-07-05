@@ -21,8 +21,8 @@ $people_data = [
 $with_first_and_last_name = function ($person) {
     return array_merge(
         $person,
-        ["first_name" => explode('', $person['full_name'])[0]],
-        ["last_name" => explode('', $person['full_name'])[1]],
+        ["first_name" => explode(' ', $person['full_name'])[0]],
+        ["last_name" => explode(' ', $person['full_name'])[1]],
     );
 };
 
@@ -58,9 +58,9 @@ $compose = function (...$funcs) {
     return function ($data) use ($funcs) {
         return array_reduce(
             $funcs,
-            fn($carry, $func) => $func($carry),
+            fn ($carry, $func) => $func($carry),
             $data
-        )
+        );
     };
 };
 
