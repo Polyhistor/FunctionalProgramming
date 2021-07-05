@@ -1,19 +1,8 @@
 <?php
 
-// function as data
-$double = function ($x) {
-    $y = $x;
-    return $y * 2;
-};
-
-$subtract_one = function ($x) {
-    return $x - 1;
-};
-
-$add_three = function ($x) {
-    return $x + 3;
-};
-
+$double = fn ($x) => $x * 2;
+$subtract_one = fn ($x) => $x - 1;
+$add_three = fn ($x) => $x + 3;
 
 $my_number = 5;
 $result;
@@ -31,7 +20,5 @@ foreach ($operations_array as $key => $value) {
         );
     };
 }
-
-
 
 echo $result;
